@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <title>Year planetay Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Year planetay Calculator </h1>
+        <form id="date">
+            <div class="form-group">
+                <label for="birthdate">When were you born</label>
+                <input class = "form-control" id="birthdate" name="birthdate" type="date" required><br>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
 
-    <title>npm_template</title>
-  </head>
-  <body>
-<h1>test</h1>
-  </body>
+        <p>The date is: <span id="dateShow"></span></p>
+        <p>You entered this birthdate: <span id="birthdateShow"></span></p>
+
+        <h3>Your age around the Solar System</h3>
+        <p>Your current age on Jupiter is: <span id="ageJupiter"></span></p>
+        <p>Your current age on Mercury is: <span id="ageMercury"></span></p>
+        <p>Your current age on Earth is: <span id="ageEarth"></span> years.</p>
+        <p>Your current age on Mars is: <span id="ageMars"></span></p>
+        <p>Your current age on Venus is: <span id="ageVenus"></span></p>
+
+    </div>
+</body>
 </html>

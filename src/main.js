@@ -1,10 +1,30 @@
-// import { npmTemplate } from './npm_template';
+import { Date } from './calculator.js';
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-// front-end logic goes here
-$(document).ready(function() {
-  event.preventDefault();
-  // var output = npmTemplate();
+$(document).ready(function(){
+  $('#date').submit(function(event){
+    event.preventDefault();
+    $('#dateShow').text();
+
+    let birthdate = $('#birthdate').val();
+
+
+    $('#birthdateShow').text(birthdate);
+    let userDate = new Date(birthdate);
+
+    let userDateEarth = userDate.ageInYears();
+    $('#ageEarth').text(userDateEarth);
+    let userDateMercury = userDate.ageOnMercury();
+    $('#ageMercury').text(userDateMercury);
+    let userDateVenus = userDate.ageOnVenus();
+    $('#ageVenus').text(userDateVenus);
+    let userDateMars = userDate.ageOnMars();
+    $('#ageMars').text(userDateMars);
+    let userDateJupiter = userDate.ageOnJupiter();
+    $('#ageJupiter').text(userDateJupiter);
+
+  });
 });
